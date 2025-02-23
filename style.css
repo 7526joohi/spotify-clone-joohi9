@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1DB954, #191414);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(25, 20, 20, 0.9));
+    padding: 8px 0; /* Slightly reduced padding */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+}
+
+header:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(25, 20, 20, 1));
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: calc(100vh - 60px); /* Adjusted height */
+    margin-top: 70px; /* More space below the header */
+    gap: 20px; /* Increased spacing between sidebar & player */
+    align-items: flex-start;
+}
+
+/* Sidebar (Library) */
+.sidebar {
+    width: 27%; /* Slightly reduced for better alignment */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 18px;
+    overflow-y: auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Playlist Items */
+.song-item {
+    padding: 10px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.song-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Player Section */
+.player-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 73%; /* Ensures proper balance */
+}
+
+/* Album Art */
+#album-art {
+    width: 80%;
+    max-width: 220px; /* Slightly increased */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 12px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #1DB954;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #17a74a;
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 85%;
+    margin-top: 10px;
+    appearance: none;
+    height: 5px;
+    background: #1DB954;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        margin-top: 60px;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .player-container {
+        max-width: 100%;
+    }
+}

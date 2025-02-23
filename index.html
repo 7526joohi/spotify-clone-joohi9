@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>Spotify</h2>
+    </header>
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Your Library</h2>
+            <ul class="playlist">
+                <li class="song-item" data-index="0" data-src="hawayein.mp3">🎵 Hawayein - Arijit Singh</li>
+                <li class="song-item" data-index="1" data-src="barish-banke.mp3">🎵 Barish Banke - Chetan</li>
+                <li class="song-item" data-index="2" data-src="sanam-teri-kasam.mp3">🎵 Sanam Teri Kasam - 
+                    Ankit Tiwari & Palak Muchhal</li>
+            </ul>
+        </aside>
+
+        <!-- Player Section -->
+        <main class="player-container">
+            <img id="album-art" src="cover.jpg" alt="Album Art">
+            <h2 id="song-title">Now Playing</h2>
+            <p id="artist">Artist Name</p>
+
+            <!-- Single Audio Element -->
+            <audio id="audio" src="hawayein.mp3"></audio>
+            <audio id="audio" src="barish-banke.mp3"></audio>
+            <audio id="audio" src="sanam-teri-kasam.mp3"></audio>
+
+            <div class="controls">
+                <button id="prev" aria-label="Previous Song">⏮</button>
+                <button id="play" aria-label="Play/Pause">⏯</button>
+                <button id="next" aria-label="Next Song">⏭</button>
+            </div>
+
+            <input type="range" id="progress-bar" min="0" max="100" value="0" aria-label="Progress Bar">
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
